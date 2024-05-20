@@ -15,8 +15,8 @@ Follow these steps to set up the project:
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/rfcfe/MovieEnthusiastChallenge.git
-cd movieEnthusiast
+git clone https://github.com/rfcfe/MovieEnthusiastAppChallenge.git
+cd MovieEnthusiastAppChallenge
 ```
 ### 2. Setup the Backend
 
