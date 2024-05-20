@@ -1,0 +1,66 @@
+.table-container {
+    max-height: 510px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid #0B749B60;
+    color: #0B749B;
+    text-align: center;
+    padding-left: 14.5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    padding-bottom: 5px;
+    z-index: 1;
+}
+
+td {
+    padding: 14.5px;
+    border-bottom: 1px solid #9AAEBB40;
+    color: #536B7A;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+td:not(:first-child):not(:last-child),
+th:not(:first-child):not(:last-child) {
+    text-align: left;
+}
+
+.eye-icon {
+    cursor: pointer;
+    color: #9AAEBB;
+}
+
+th.RANKING {
+    width: 10%;
+}
+
+th.TITLE {
+    width: 65%;
+}
+
+th.YEAR {
+    width: 5%;
+}
+
+th.REVENUE {
+    width: 15%;
+}
+
+th:last-child {
+    width: 5%;
+}

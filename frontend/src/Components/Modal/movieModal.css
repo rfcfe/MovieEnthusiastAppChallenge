@@ -1,0 +1,132 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.modal-content {
+    position: fixed;
+    background-color: white;
+    margin-top: 15px;
+    width: 54.75vw;
+    max-height: 80vh;
+    padding-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 32px 0px 58px;
+    color: #718FA2;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.modal-close-container:hover .modal-close-text {
+    transform: translate(-30px, -20px);
+    color: black;
+
+}
+
+.modal-close-icon {
+    cursor: pointer;
+    font-size: 24px
+}
+
+.modal-close-container:hover .modal-close-icon {
+    color: black;
+}
+
+.modal-close-text {
+    font-size: 8px;
+    color: #718FA2;
+    transition: transform 0.3s ease;
+}
+
+.modal-title {
+    color: #164E78;
+    text-align: left;
+    margin: 30px 62px 32px 58px;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+}
+
+.modal-subtitle {
+    text-align: left;
+    margin: 16px 62px 4px 58px;
+    color: #78849EB9;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modal-text {
+    text-align: left;
+    margin: 0 62px 0 58px;
+    color: #78849E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.crew-container {
+    display: flex;
+    gap: 48px;
+}
+
+.crew-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-crew-text {
+    text-align: left;
+    margin-left: 58px;
+    color: #00BAFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.modal-crew-subtitle {
+    text-align: left;
+    margin: 16px 62px 17px 58px;
+    color: #78849EB9;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.crew-container .crew-group:nth-child(2) .modal-crew-subtitle {
+    margin-left: 0px;
+}
+
+.crew-container .crew-group:nth-child(2) .modal-crew-text {
+    margin-left: 0px;
+}
+
+.line {
+    border: 1px solid #17a9df;
+    width: 60px;
+    margin: -10px 0 0 58px;
+}
