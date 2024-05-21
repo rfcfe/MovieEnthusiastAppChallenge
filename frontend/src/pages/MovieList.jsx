@@ -148,7 +148,7 @@ const MovieList = () => {
               Top 10 Revenue {selectedYear}
             </button>
 
-            {(activeTop10 || selectedYearTop10) && (
+            {(activeTop10 || selectedYearTop10 && !showYearModal) && (
               <div className="filter-reset" onClick={resetFilter}>
                 <FontAwesomeIcon icon={faRotateLeft} />
               </div>
