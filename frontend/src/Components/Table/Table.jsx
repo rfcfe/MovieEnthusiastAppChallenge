@@ -4,9 +4,9 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import "./table.css";
 import { formatNumberWithCommas } from "../../utils/DataManipulation";
 
-function Table({ headers, movies, handleMovieClick }) {
+function Table({ headers, movies, handleMovieClick}) {
   return (
-    <div className="table-container">
+    <div id= "table-container" className="table-container">
       <table>
         <thead>
           <tr>

@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./MovieList.css";
-import MovieModal from "./Modal/MovieModal";
-import Table from "./Table/Table";
+import MovieModal from "../Components/Modal/MovieModal";
+import Table from "../Components/Table/Table";
 import {
   fetchMovies,
   fetchMovieDetails,
   fetchTopRevenueMovies,
   fetchTopRevenueMoviesPerYear,
 } from "../services/DataFetch";
-import Navbar from "./Navbar/Navbar";
+import Navbar from "../Components/Navbar/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
-import YearModal from "./Modal/YearModal";
+import YearModal from "../Components/Modal/YearModal";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -97,7 +97,7 @@ const MovieList = () => {
     if (!loading && !activeTop10 && !selectedYearTop10) {
       setPage((prevPage) => prevPage + 1);
     }
-  }, [loading, activeTop10, selectedYearTop10]);
+  }, [loading, activeTop10, selectedYearTop10, loading]);
 
   useEffect(() => {
     if (observer.current) {
@@ -106,18 +106,13 @@ const MovieList = () => {
 
     const handleIntersection = (entries) => {
       const target = entries[0];
-      if (
-        target.isIntersecting &&
-        !loading &&
-        !activeTop10 &&
-        !selectedYearTop10
-      ) {
+      if (target.isIntersecting) {
         prefetchNextPage();
       }
     };
-
+    const table = document.querySelector("#table-container");
     observer.current = new IntersectionObserver(handleIntersection, {
-      root: null,
+      root: table,
       rootMargin: "200px",
       threshold: 0.25,
     });
@@ -129,7 +124,8 @@ const MovieList = () => {
     return () => {
       if (observer.current) observer.current.disconnect();
     };
-  }, [prefetchNextPage, loading, activeTop10, selectedYearTop10]);
+  }, [prefetchNextPage]);
+
   return (
     <>
       <Navbar />
@@ -144,7 +140,9 @@ const MovieList = () => {
               Top 10 Revenue
             </button>
             <button
-              className={`filter-button ${selectedYearTop10 || showYearModal ? "active" : ""}`}
+              className={`filter-button ${
+                selectedYearTop10 || showYearModal ? "active" : ""
+              }`}
               onClick={handleSelectYearClick}
             >
               Top 10 Revenue {selectedYear}
