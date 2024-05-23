@@ -1,5 +1,5 @@
 # MovieEnthusiasChallenge
-This project is a web application built for the xpand it interview process. It features a dynamic movie table that supports infinite scroll and filtering options.
+This project is a web application built for the Xpand IT interview process. It features a dynamic movie table that supports infinite scroll and filtering options.
 
 ## Tech Stack
 Frontend: [React](https://react.dev/)
